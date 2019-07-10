@@ -1,0 +1,8 @@
+childaggression_original <- read.csv("childaggressionUKUS.csv")
+colnames(childaggression_original)[colnames(childaggression_original)=="VideoUK"] <- "VideoUK&US"
+colnames(childaggression_original)[colnames(childaggression_original)=="ElectUK"] <- "ElectUK&US"
+colnames(childaggression_original)[colnames(childaggression_original)=="SibUK"] <- "SibUK&US"
+colnames(childaggression_original)[colnames(childaggression_original)=="ParUk"] <- "ParUK&US"
+colnames(childaggression_original)[colnames(childaggression_original)=="NutUK"] <- "NutUK&US"
+childaggresion_clean <- childaggression_original[!childaggression_original$UK/US == "UK", ]
+
